@@ -1,0 +1,169 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<{$xoops_langcode}>" lang="<{$xoops_langcode}>">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=<{$xoops_charset}>" />
+<meta http-equiv="content-language" content="<{$xoops_langcode}>" />
+<meta name="robots" content="<{$xoops_meta_robots}>" />
+<meta name="keywords" content="<{$xoops_meta_keywords}>" />
+<meta name="description" content="<{$xoops_meta_description}>" />
+<meta name="rating" content="<{$xoops_meta_rating}>" />
+<meta name="author" content="<{$xoops_meta_author}>" />
+<meta name="copyright" content="<{$xoops_meta_copyright}>" />
+<meta name="generator" content="XOOPS" />
+<meta http-equiv="Refresh" content="<{$time}>; url=<{$url}>" />
+<title><{$xoops_sitename}></title>
+<link href="<{$xoops_url}>/favicon.ico" rel="SHORTCUT ICON" />
+<link rel="stylesheet" type="text/css" media="screen" href="<{$xoops_url}>/xoops.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="<{$xoops_themecss}>" />
+<!-- RMV: added module header -->
+<{$xoops_module_header}>
+<script type="text/javascript">
+<!--
+<{$xoops_js}>
+//-->
+</script>
+<style type="text/css"><!--
+a:hover {cursor:url("<{$xoops_imageurl}>images/elf.cur"), pointer}
+-->
+  .cursorUno{cursor:url("<{$xoops_imageurl}>images/undead.cur");}
+</style>
+<body class="cursorUno">
+<style type="text/css">
+
+#dhtmltooltip{
+position: absolute;
+align: center;
+valign: center;
+visibility: hidden;
+z-index: 100;
+/*Remove below line to remove shadow. Below line should always appear last within this CSS*/
+/*filter: progid:DXImageTransform.Microsoft.Shadow(color=gray,direction=135);*/
+}
+
+</style></head>
+<body>
+ <script type="text/javascript">
+
+/***********************************************
+* Cool DHTML tooltip script- © Dynamic Drive DHTML code library (www.dynamicdrive.com)
+* This notice MUST stay intact for legal use
+* Visit Dynamic Drive at http://www.dynamicdrive.com/ for full source code
+***********************************************/
+
+var offsetxpoint=-60 //Customize x offset of tooltip
+var offsetypoint=20 //Customize y offset of tooltip
+var ie=document.all
+var ns6=document.getElementById && !document.all
+var enabletip=false
+if (ie||ns6)
+var tipobj=document.all? document.all["dhtmltooltip"] : document.getElementById? document.getElementById("dhtmltooltip") : ""
+
+function ietruebody(){
+return (document.compatMode && document.compatMode!="BackCompat")? document.documentElement : document.body
+}
+
+function ddrivetip(thetext, thecolor, thewidth){
+if (ns6||ie){
+if (typeof thewidth!="undefined") tipobj.style.width=thewidth+"px"
+if (typeof thecolor!="undefined" && thecolor!="") tipobj.style.backgroundColor=thecolor
+tipobj.innerHTML="<table width='100%'  border='0' cellspacing='0' cellpadding='0' style='border-width: 0px' height='5'><tr><td style='border-style: none; border-width: medium' height='5' colspan='4'><table width='100%'  cellSpacing=0 cellPadding=0 border=0><TR><TD><IMG height=1 src='colaboradores/razor/visit2k4/pixel.gif' width=5></TD><TD><table width='100%' cellSpacing=0 cellPadding=0 bgColor=#081026 border=0><TBODY><TR><TD width=3><IMG height=3 src='colaboradores/razor/visit2k4/thin-gold-top-left.gif' width=3></TD><TD width='100%' background='colaboradores/razor/visit2k4/thin-gold-top.gif'></TD><TD width=3><IMG height=3 src='colaboradores/razor/visit2k4/thin-gold-top-right.gif' width=3></TD></TR><TR><TD width=3 background='colaboradores/razor/visit2k4/thin-gold-left.gif'><IMG height=1 src='colaboradores/razor/visit2k4/pixel.gif' width=3></TD><TD width='100%'><table width='100%'  cellSpacing=0 cellPadding=0 width='100%'border=0><TBODY><TR><TD style='BORDER-RIGHT: #606060 1px dotted; BORDER-TOP: #606060 1px dotted; BORDER-LEFT: #606060 1px dotted; BORDER-BOTTOM: #606060 1px dotted'><table width='100%'  cellSpacing='0' cellPadding='6' width='100%' border='0'><tr><td vAlign='top' align='left'><p class='content'>"+thetext+"</p></td></tr></table></TD></TR></TBODY></TABLE></TD><TD width=3 background='colaboradores/razor/visit2k4/thin-gold-right.gif'><IMG height=1 src='colaboradores/razor/visit2k4/pixel.gif' width=3></TD></TR><TR><TD width=3><IMG height=3 src='colaboradores/razor/visit2k4/thin-gold-bot-left.gif' width=3></TD><TD width='100%' background='colaboradores/razor/visit2k4/thin-gold-top.gif'></TD><TD width=3><IMG height=3 src='colaboradores/razor/visit2k4/thin-gold-bot-right.gif' width=3></TD></TR></TBODY></TABLE></TD><TD><IMG height=1 src='colaboradores/razor/visit2k4/pixel.gif' width=5></TD></span></TR></TABLE></td></tr><tr></tr></table>"
+enabletip=true
+return false
+}
+}
+
+function positiontip(e){
+if (enabletip){
+var curX=(ns6)?e.pageX : event.x+ietruebody().scrollLeft;
+var curY=(ns6)?e.pageY : event.y+ietruebody().scrollTop;
+//Find out how close the mouse is to the corner of the window
+var rightedge=ie&&!window.opera? ietruebody().clientWidth-event.clientX-offsetxpoint : window.innerWidth-e.clientX-offsetxpoint-20
+var bottomedge=ie&&!window.opera? ietruebody().clientHeight-event.clientY-offsetypoint : window.innerHeight-e.clientY-offsetypoint-20
+
+var leftedge=(offsetxpoint<0)? offsetxpoint*(-1) : -1000
+
+//if the horizontal distance isn't enough to accomodate the width of the context menu
+if (rightedge<tipobj.offsetWidth)
+//move the horizontal position of the menu to the left by it's width
+tipobj.style.left=ie? ietruebody().scrollLeft+event.clientX-tipobj.offsetWidth+"px" : window.pageXOffset+e.clientX-tipobj.offsetWidth+"px"
+else if (curX<leftedge)
+tipobj.style.left="5px"
+else
+//position the horizontal position of the menu where the mouse is positioned
+tipobj.style.left=curX+offsetxpoint+"px"
+
+//same concept with the vertical position
+if (bottomedge<tipobj.offsetHeight)
+tipobj.style.top=ie? ietruebody().scrollTop+event.clientY-tipobj.offsetHeight-offsetypoint+"px" : window.pageYOffset+e.clientY-tipobj.offsetHeight-offsetypoint+"px"
+else
+tipobj.style.top=curY+offsetypoint+"px"
+tipobj.style.visibility="visible"
+}
+}
+
+function hideddrivetip(){
+if (ns6||ie){
+enabletip=false
+tipobj.style.visibility="hidden"
+tipobj.style.left="-1000px"
+tipobj.style.backgroundColor=''
+tipobj.style.width=''
+}
+}
+
+document.onmousemove=positiontip
+
+</script>
+</head>
+<body>
+  		<table class="toptable" cellspacing="0">
+<tr>
+      <td><a href="<{$xoops_url}>/"><img src="<{$xoops_imageurl}>images/logo1.png" width="274" height="118" alt="" /></a></td>
+      <td id="headerbanner">
+<img src="<{$xoops_imageurl}>images/logo.gif" width="262" height="108" alt="" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</td>
+      <td><img src="<{$xoops_imageurl}>images/logo3.png" width="147" height="118" alt="" /></td>
+ </tr>
+      <td><a href="<{$xoops_url}>/"><img src="<{$xoops_imageurl}>images/logo2.png" width="274" height="122" alt="" /></a></td>
+ <td id="headerbanner">
+<br /><br /><br />
+<{if $xoops_isuser == 0}>
+<form style="margin-top: 0px;" action="<{$xoops_url}>/user.php" method="post">
+    <img src="<{$xoops_imageurl}>images/user.png" width="85" height="15" alt="" />
+    <input type="text" name="uname" size="12" value="<{$block.unamevalue}>" maxlength="25" />
+    <img src="<{$xoops_imageurl}>images/pass.png" width="85" height="15" alt="" />
+    <input type="password" name="pass" size="12" maxlength="32" />
+    <input type="hidden" name="xoops_redirect" value="<{$xoops_requesturi}>" />
+    <input type="hidden" name="op" value="login" />
+    <input type="submit" value="Login" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+    <{$block.sslloginlink}>
+</form>
+<br />
+<a href="<{$xoops_url}>/user.php#lost"><img src="<{$xoops_imageurl}>images/lpass.png" width="194" height="20" alt="" /></a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="<{$xoops_url}>/register.php"><img src="<{$xoops_imageurl}>images/reg.png" width="194" height="20" alt="" /></a>
+<{/if}>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<{if $xoops_isuser == 1}>
+<br />
+<br />
+<br />
+<a href="<{$xoops_url}>/user.php"><img src="<{$xoops_imageurl}>images/view.png" width="96" height="26" alt="" /></a>
+<a href="<{$xoops_url}>/edituser.php"><img src="<{$xoops_imageurl}>images/edit.png" width="96" height="26" alt="" /></a>
+<a href="<{$xoops_url}>/notifications.php"><img src="<{$xoops_imageurl}>images/notifs.png" width="96" height="26" alt="" /></a>
+<a href="<{$xoops_url}>/viewpmsg.php"><img src="<{$xoops_imageurl}>images/mess.png" width="96" height="26" alt="" /></a>
+<a href="<{$xoops_url}>/user.php?op=logout"><img src="<{$xoops_imageurl}>images/logout.png" width="96" height="26" alt="" /></a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<{/if}>
+</td>
+       <td><img src="<{$xoops_imageurl}>images/logo4.png" width="147" height="122" alt="" /></td>
+  </tr>
+  </table>
+<div style="text-align:center; background-color: #000000; font-weight : bold;">
+  <h4><{$message}></h4>
+  <p><{$lang_ifnotreload}></p>
+</div>
+<{if $xoops_logdump != ''}><div><{$xoops_logdump}></div><{/if}>
+</body>
+</html>
